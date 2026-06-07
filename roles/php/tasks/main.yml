@@ -1,0 +1,14 @@
+---
+- name: Install PHP and required extensions
+  apt:
+    name:
+      - php
+      - php-mysql
+      - php-curl
+      - php-gd
+      - php-mbstring
+      - php-xml
+      - php-zip
+      - libapache2-mod-php
+    state: present
+  notify: Restart Apache

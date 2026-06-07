@@ -1,0 +1,17 @@
+---
+- name: Update all packages
+  apt:
+    update_cache: yes
+    upgrade: dist
+
+- name: Set timezone to Europe/Helsinki
+  timezone:
+    name: Europe/Helsinki
+
+- name: Install common utilities
+  apt:
+    name:
+      - curl
+      - unzip
+      - git
+    state: present

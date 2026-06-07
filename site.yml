@@ -1,0 +1,13 @@
+---
+- name: Set up LAMP stack with WordPress
+  hosts: local
+  become: true
+  vars_files:
+    - vars/main.yml
+
+  roles:
+    - common
+    - apache
+    - php
+    - mysql
+    - wordpress
